@@ -1,0 +1,8 @@
+name: 'tfsec'
+description: 'Runs tfsec and comments on a PR with reviewdog.'
+
+runs:
+  using: 'composite'
+  steps:
+    - run: $GITHUB_ACTION_PATH/exec/wrapper-tfsec.sh
+      shell: bash
