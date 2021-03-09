@@ -9,6 +9,6 @@ while IFS= read -r FILE; do
 done < _TERRAFORM_LIST
 
 if [[ -f "_TERRAFORM_DIFF" ]]; then
-  reviewdog -f=diff -reporter=github-pr-review < _TERRAFORM_DIFF
+  reviewdog -f=diff -name="terraform fmt" -reporter=github-pr-review < _TERRAFORM_DIFF
   exit 1
 fi
