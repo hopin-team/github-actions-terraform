@@ -17,7 +17,7 @@ do
       _EXIT_CODE="1"
     fi
 
-    cat _TFLINT | reviewdog -f=checkstyle -reporter=github-pr-review
+    cat _TFLINT | reviewdog -f=checkstyle -name="tflint" -reporter=github-pr-review
   fi
 done
 
